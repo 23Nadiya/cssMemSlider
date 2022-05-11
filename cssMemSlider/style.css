@@ -6,7 +6,7 @@
 
 body {
   text-align: center;
-  background-color: #b5d1d2;
+  background-color: #537e28;
 }
 
 .main-container {
@@ -15,28 +15,55 @@ body {
   margin: 2vw auto;
   width: 65%;
   height: 100%;
-  padding: 2vw 6vw 3vw;
+  padding: 2vw 6vw 1vw;
   border-radius: 1rem;
-  background-color: #505356;
+  background-color: #393b3b;
 }
 
 .slider-container {
   border-radius: 1rem;
   overflow: hidden;
-  border: 0.5rem solid #3f3f3f;
+  border: 0.4rem solid #212222;
 }
 
-.wrapper {
+.wrapper-slider {
   display: flex;
   width: 400%;
   height: 80%;
   padding: 2vw;
-  background-color: #a7abae;
+  background-color: #727474;
 }
 
 .slider {
   width: 25%;
   overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.nav-panel {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description {
+  overflow: hidden;
+}
+
+.wrapper-text {
+  display: flex;
+  width: 400%;
+  padding: 1vw 0 0 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #b8bebe;
+}
+
+.text {
+  width: 25%;
+  overflow: hidden;
+  transition: 0.5s ease;
 }
 
 .slider-nav {
@@ -47,16 +74,57 @@ body {
 }
 
 input {
-  display: none;
+  visibility: hidden;
 }
 
 .radio {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  border: 0.2rem solid #3f3f3f;
-  background-color: #a7abae;
+  border: 0.2rem solid #212222;
+  background-color: #727474;
   cursor: pointer;
-  margin: 0.5rem;
+  margin: 0.2rem;
   transition: 0.3s;
+}
+
+.radio:hover {
+  background-color: #212222;
+}
+
+#sl1:checked ~ .nav-panel .slider-nav label:nth-child(1),
+#sl2:checked ~ .nav-panel .slider-nav label:nth-child(2),
+#sl3:checked ~ .nav-panel .slider-nav label:nth-child(3),
+#sl4:checked ~ .nav-panel .slider-nav label:nth-child(4) {
+  background-color: #212222;
+}
+
+/* slider */
+
+#sl1:checked ~ .slider-container .wrapper-slider .start {
+  margin-left: 0;
+}
+#sl2:checked ~ .slider-container .wrapper-slider .start {
+  margin-left: -25%;
+}
+#sl3:checked ~ .slider-container .wrapper-slider .start {
+  margin-left: -50%;
+}
+#sl4:checked ~ .slider-container .wrapper-slider .start {
+  margin-left: -75%;
+}
+
+/* text */
+
+#sl1:checked ~ .nav-panel .description .wrapper-text .first {
+  margin-left: 0;
+}
+#sl2:checked ~ .nav-panel .description .wrapper-text .first {
+  margin-left: -25%;
+}
+#sl3:checked ~ .nav-panel .description .wrapper-text .first {
+  margin-left: -50%;
+}
+#sl4:checked ~ .nav-panel .description .wrapper-text .first {
+  margin-left: -75%;
 }
