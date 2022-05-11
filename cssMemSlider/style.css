@@ -3,3 +3,60 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  text-align: center;
+  background-color: #b5d1d2;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 2vw auto;
+  width: 65%;
+  height: 100%;
+  padding: 2vw 6vw 3vw;
+  border-radius: 1rem;
+  background-color: #505356;
+}
+
+.slider-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 0.5rem solid #3f3f3f;
+}
+
+.wrapper {
+  display: flex;
+  width: 400%;
+  height: 80%;
+  padding: 2vw;
+  background-color: #a7abae;
+}
+
+.slider {
+  width: 25%;
+  overflow: hidden;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-right: 6rem;
+}
+
+input {
+  display: none;
+}
+
+.radio {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 0.2rem solid #3f3f3f;
+  background-color: #a7abae;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: 0.3s;
+}
