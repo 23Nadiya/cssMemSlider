@@ -138,10 +138,20 @@ input {
 
 @media (max-width: 768px) {
   .main-container {
-    margin: 6vw auto;
+    width: 75%;
+    margin: 10vw auto;
+    padding: 2vw 6vw 0vw;
   }
 
   .nav-panel {
     flex-direction: column;
+  }
+
+  .wrapper-text {
+    font-size: 1.2rem;
+  }
+
+  .slider-img {
+    max-width: 50vw;
   }
 }
