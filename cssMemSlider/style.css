@@ -55,6 +55,8 @@ body {
 }
 
 .description {
+  text-align: left;
+  padding-left: 10px;
   overflow: hidden;
 }
 
@@ -85,24 +87,32 @@ input {
 }
 
 .radio {
+  padding: 2px;
+}
+
+.radio-lab {
+  display: block;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   border: 0.2rem solid #212222;
   background-color: #727474;
-  cursor: pointer;
   margin: 0.2rem;
   transition: 0.3s;
 }
 
 .radio:hover {
+  cursor: pointer;
+}
+
+.radio-lab:hover {
   background-color: #212222;
 }
 
-#sl1:checked ~ .nav-panel .slider-nav label:nth-child(1),
-#sl2:checked ~ .nav-panel .slider-nav label:nth-child(2),
-#sl3:checked ~ .nav-panel .slider-nav label:nth-child(3),
-#sl4:checked ~ .nav-panel .slider-nav label:nth-child(4) {
+#sl1:checked ~ .nav-panel .slider-nav label:nth-child(1) .radio-lab,
+#sl2:checked ~ .nav-panel .slider-nav label:nth-child(2) .radio-lab,
+#sl3:checked ~ .nav-panel .slider-nav label:nth-child(3) .radio-lab,
+#sl4:checked ~ .nav-panel .slider-nav label:nth-child(4) .radio-lab {
   background-color: #212222;
 }
 
@@ -145,6 +155,10 @@ input {
 
   .nav-panel {
     flex-direction: column;
+  }
+
+  .description {
+    align-self: flex-start;
   }
 
   .wrapper-text {
